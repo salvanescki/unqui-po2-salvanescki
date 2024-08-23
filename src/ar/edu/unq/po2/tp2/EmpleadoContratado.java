@@ -1,6 +1,6 @@
 package ar.edu.unq.po2.tp2;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class EmpleadoContratado extends Empleado {
 	
@@ -9,8 +9,8 @@ public class EmpleadoContratado extends Empleado {
 	@SuppressWarnings("unused")
 	private String medioDePago;
 
-	public EmpleadoContratado(String nombre, String direccion, String estadoCivil, Date fechaNacimiento,
-			double sueldoBasico, int numeroDeContrato, String medioDePago) {
+	public EmpleadoContratado(String nombre, String direccion, String estadoCivil, LocalDate fechaNacimiento,
+			int sueldoBasico, int numeroDeContrato, String medioDePago) {
 		super(nombre, direccion, estadoCivil, fechaNacimiento, sueldoBasico);
 		this.numeroDeContrato = numeroDeContrato;
 		this.medioDePago = medioDePago;
@@ -20,12 +20,12 @@ public class EmpleadoContratado extends Empleado {
 		return 50;
 	}
 	
-	public double sueldoBruto() {
+	public int sueldoBruto() {
 		return this.sueldoBasico();
 	}
 	
-	public double retenciones() {
-		return this.gastosAdministrativosContractuales();
+	public int retenciones() {
+		return this.gastosAdministrativosContractuales() * 100;
 	}
 	
 	public String desgloceConceptos() {

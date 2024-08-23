@@ -1,20 +1,20 @@
 package ar.edu.unq.po2.tp2;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class EmpleadoPlantaTemporaria extends Empleado {
 
-	private Date fechaFinDeDesignacionPlantaTemporaria;
+	private LocalDate fechaFinDeDesignacionPlantaTemporaria;
 	private int horasExtra;
 
-	public EmpleadoPlantaTemporaria(String nombre, String direccion, String estadoCivil, Date fechaNacimiento,
-			double sueldoBasico, Date fechaFinTemporaria, int horasExtra) {
+	public EmpleadoPlantaTemporaria(String nombre, String direccion, String estadoCivil, LocalDate fechaNacimiento,
+			int sueldoBasico, LocalDate fechaFinTemporaria, int horasExtra) {
 		super(nombre, direccion, estadoCivil, fechaNacimiento, sueldoBasico);
 		this.fechaFinDeDesignacionPlantaTemporaria = fechaFinTemporaria;
 		this.horasExtra = horasExtra;
 	}
 
-	public Date fechaFinDeDesignacionPlantaTemporaria() {
+	public LocalDate fechaFinDeDesignacionPlantaTemporaria() {
 		return this.fechaFinDeDesignacionPlantaTemporaria;
 	}
 
@@ -22,20 +22,20 @@ public class EmpleadoPlantaTemporaria extends Empleado {
 		return this.horasExtra;
 	}
 
-	private double montoHorasExtra() {
+	private int montoHorasExtra() {
 		return 40 * this.horasExtra;
 	}
 
-	public double sueldoBruto() {
-		return this.sueldoBasico() + this.montoHorasExtra();
+	public int sueldoBruto() {
+		return this.sueldoBasico() + this.montoHorasExtra() * 100;
 	}
 
-	public double obraSocial() {
-		return 0.1 * this.sueldoBruto() + (this.edad() >= 50 ? 25 : 0);
+	public int obraSocial() {
+		return this.sueldoBruto() / 10 + (this.edad() >= 50 ? 25 : 0) * 100;
 	}
 
-	public double aportesJubilatorios() {
-		return 0.1 * this.sueldoBruto() + 5 * this.horasExtra;
+	public int aportesJubilatorios() {
+		return this.sueldoBruto() / 10 + 500 * this.horasExtra;
 	}
 
 	public String desgloceConceptos() {

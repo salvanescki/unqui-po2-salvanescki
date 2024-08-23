@@ -1,17 +1,17 @@
 package ar.edu.unq.po2.tp2;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 public class ReciboDeHaberes {
 
 	private String nombreEmpleado;
 	private String direccion;
-	private Date fechaEmision;
+	private LocalDate fechaEmision;
 	private double sueldoBruto;
 	private double sueldoNeto;
 	private String desgloceConceptos;
 
-	public ReciboDeHaberes(String nombre, String direccion, Date fechaEmision, double sueldoBruto, double sueldoNeto,
+	public ReciboDeHaberes(String nombre, String direccion, LocalDate fechaEmision, double sueldoBruto, double sueldoNeto,
 			String desgloceConceptos) {
 		this.nombreEmpleado = nombre;
 		this.direccion = direccion;
@@ -29,7 +29,7 @@ public class ReciboDeHaberes {
 		return this.direccion;
 	}
 
-	public Date fechaEmision() {
+	public LocalDate fechaEmision() {
 		return this.fechaEmision;
 	}
 

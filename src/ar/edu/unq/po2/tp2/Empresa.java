@@ -1,25 +1,26 @@
 package ar.edu.unq.po2.tp2;
 
-import java.sql.Date;
 import java.time.LocalDate;
-import java.util.List;
+import java.util.ArrayList;
 
 public class Empresa {
 	private String nombre;
-	private int cuit;
-	private List<Empleado> empleados;
-	private List<ReciboDeHaberes> recibosDeHaberes;
+	private long cuit;
+	private ArrayList<Empleado> empleados;
+	private ArrayList<ReciboDeHaberes> recibosDeHaberes;
 
-	public Empresa(String nombre, int cuit) {
+	public Empresa(String nombre, long cuit) {
 		this.nombre = nombre;
 		this.cuit = cuit;
+		this.empleados = new ArrayList<Empleado>();
+		this.recibosDeHaberes = new ArrayList<ReciboDeHaberes>();
 	}
 
 	public String nombre() {
 		return this.nombre;
 	}
 
-	public int cuit() {
+	public long cuit() {
 		return this.cuit;
 	}
 
@@ -32,20 +33,20 @@ public class Empresa {
 	}
 
 	public double totalSueldosNetos() {
-		return this.empleados.stream().mapToDouble(e -> e.sueldoNeto()).sum();
+		return this.empleados.stream().mapToInt(e -> e.sueldoNeto()).sum();
 	}
 
 	public double totalSueldosBrutos() {
-		return this.empleados.stream().mapToDouble(e -> e.sueldoBruto()).sum();
+		return this.empleados.stream().mapToInt(e -> e.sueldoBruto()).sum();
 	}
 
 	public double totalRetenciones() {
-		return this.empleados.stream().mapToDouble(e -> e.retenciones()).sum();
+		return this.empleados.stream().mapToInt(e -> e.retenciones()).sum();
 	}
 
 	public void liquidarSueldos() {
 		this.empleados.forEach(e -> {
-			recibosDeHaberes.add(new ReciboDeHaberes(e.nombre(), e.direccion(), Date.valueOf(LocalDate.now()),
+			recibosDeHaberes.add(new ReciboDeHaberes(e.nombre(), e.direccion(), LocalDate.now(),
 					e.sueldoBruto(), e.sueldoNeto(), e.desgloceConceptos()));
 		});
 	}

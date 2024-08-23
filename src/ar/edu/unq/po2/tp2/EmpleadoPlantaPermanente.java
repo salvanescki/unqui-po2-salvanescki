@@ -1,41 +1,41 @@
 package ar.edu.unq.po2.tp2;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class EmpleadoPlantaPermanente extends Empleado {
 
 	private int cantidadDeHijos;
 	private int antiguedad;
 
-	public EmpleadoPlantaPermanente(String nombre, String direccion, String estadoCivil, Date fechaNacimiento,
-			double sueldoBasico, int cantidadDeHijos, int antiguedad) {
+	public EmpleadoPlantaPermanente(String nombre, String direccion, String estadoCivil, LocalDate fechaNacimiento,
+			int sueldoBasico, int cantidadDeHijos, int antiguedad) {
 		super(nombre, direccion, estadoCivil, fechaNacimiento, sueldoBasico);
 		this.cantidadDeHijos = cantidadDeHijos;
 		this.antiguedad = antiguedad;
 	}
 
-	public double sueldoBruto() {
-		return this.sueldoBasico() + this.asignacionPorHijo() + this.asignacionPorConyuge() + this.montoPorAntiguedad();
+	public int sueldoBruto() {
+		return this.sueldoBasico() + (this.asignacionPorHijo() + this.asignacionPorConyuge() + this.montoPorAntiguedad()) * 100;
 	}
 
-	public double montoPorAntiguedad() {
+	public int montoPorAntiguedad() {
 		return 50 * this.antiguedad;
 	}
 
-	public double asignacionPorHijo() {
+	public int asignacionPorHijo() {
 		return 150 * cantidadDeHijos;
 	}
 
-	public double asignacionPorConyuge() {
+	public int asignacionPorConyuge() {
 		return this.estadoCivil() == "Casado" ? 100 : 0;
 	}
 
-	public double obraSocial() {
-		return 0.1 * this.sueldoBruto() + 20 * this.cantidadDeHijos;
+	public int obraSocial() {
+		return this.sueldoBruto() / 10 + 20 * this.cantidadDeHijos * 100;
 	}
 
-	public double aportesJubilatorios() {
-		return 0.15 * this.sueldoBruto();
+	public int aportesJubilatorios() {
+		return this.sueldoBruto() * 15 / 100;
 	}
 
 	public String desgloceConceptos() {

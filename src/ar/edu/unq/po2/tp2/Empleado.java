@@ -2,18 +2,16 @@ package ar.edu.unq.po2.tp2;
 
 import java.time.LocalDate;
 import java.time.Period;
-import java.time.ZoneId;
-import java.util.Date;
 
 public class Empleado {
 
 	private String nombre;
 	private String direccion;
 	private String estadoCivil;
-	private Date fechaDeNacimiento;
-	private double sueldoBasico;
+	private LocalDate fechaDeNacimiento;
+	private int sueldoBasico;
 
-	public Empleado(String nombre, String direccion, String estadoCivil, Date fechaNacimiento, double sueldoBasico) {
+	public Empleado(String nombre, String direccion, String estadoCivil, LocalDate fechaNacimiento, int sueldoBasico) {
 		this.nombre = nombre;
 		this.direccion = direccion;
 		this.estadoCivil = estadoCivil;
@@ -33,44 +31,43 @@ public class Empleado {
 		return this.estadoCivil;
 	}
 
-	public Date fechaDeNacimiento() {
+	public LocalDate fechaDeNacimiento() {
 		return this.fechaDeNacimiento;
 	}
 
-	public double sueldoBasico() {
+	public int sueldoBasico() {
 		return this.sueldoBasico;
 	}
 
 	public int edad() {
-		return Period.between(LocalDate.ofInstant(this.fechaDeNacimiento.toInstant(), ZoneId.systemDefault()),
-				LocalDate.now()).getYears();
+		return Period.between(this.fechaDeNacimiento, LocalDate.now()).getYears();
 	}
 
-	public double sueldoBruto() {
+	public int sueldoBruto() {
 		// Needs to be overridden by children
 		return 0;
 	}
 
-	public double asignacionPorHijo() {
+	public int asignacionPorHijo() {
 		// Needs to be overridden by children
 		return 0;
 	}
 
-	public double asignacionPorConyuge() {
+	public int asignacionPorConyuge() {
 		// Needs to be overridden by children
 		return 0;
 	}
 
-	public double retenciones() {
+	public int retenciones() {
 		return this.obraSocial() + this.aportesJubilatorios();
 	}
 
-	public double obraSocial() {
+	public int obraSocial() {
 		// Needs to be overridden by children
 		return 0;
 	}
 
-	public double aportesJubilatorios() {
+	public int aportesJubilatorios() {
 		// Needs to be overridden by children
 		return 0;
 	}
@@ -80,7 +77,7 @@ public class Empleado {
 		return 0;
 	}
 
-	public double sueldoNeto() {
+	public int sueldoNeto() {
 		return this.sueldoBruto() - this.retenciones();
 	}
 
