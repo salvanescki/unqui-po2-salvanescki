@@ -51,5 +51,9 @@ public class Empresa {
 					e.sueldoNeto(), e.desgloceConceptos()));
 		});
 	}
+	
+	public int cantidadDeRecibos(){
+		return this.recibosDeHaberes.size();
+	}
 
 }

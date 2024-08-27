@@ -14,6 +14,8 @@ class EmpresaTest {
 			LocalDate.of(1978, Month.MAY, 2), 30000000, 2, 6);
 	private EmpleadoPlantaTemporaria carlos = new EmpleadoPlantaTemporaria("Carlos", "Calle falsa 890", "Soltero",
 			LocalDate.of(2001, Month.NOVEMBER, 1), 25000000, LocalDate.of(2024, Month.DECEMBER, 1), 6);
+	private EmpleadoContratado pepe = new EmpleadoContratado("Pepe", "Calle falsa 9999", "Soltero",
+			LocalDate.of(1990, Month.JANUARY, 2), 120000000, 43205, "Cheque");
 	private Empresa empresa = new Empresa("Empre S.A", 334608698233l);
 
 	@BeforeEach
@@ -30,7 +32,12 @@ class EmpresaTest {
 	@Test
 	void liquidacionDeSueldosTest() {
 		empresa.liquidarSueldos();
-		assertTrue(true);
+		assertEquals(2, empresa.cantidadDeRecibos());
 	}
-
+	
+	@Test
+	void contratarEmpleadoContratadoPepe() {
+		empresa.contratarEmpleado(pepe);
+		assertEquals(162559700, empresa.totalSueldosNetos());
+	}
 }
