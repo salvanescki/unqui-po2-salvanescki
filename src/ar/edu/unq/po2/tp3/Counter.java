@@ -13,5 +13,15 @@ public class Counter {
 	public int getEvenOcurrences() {
 		return (int) this.numbers.stream().filter(n -> n % 2 == 0).count();
 	}
+	
+	public int getOddOcurrences() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public int countMultiplesOf(int i) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 }

@@ -40,5 +40,27 @@ public class CounterTestCase {
 		// I check the amount is the expected one
 		assertEquals(amount, 1);
 	}
+	
+	/**
+	 * Verifica la cantidad de impares
+	 */
+	@Test
+	public void testOddNumbers() {
+		// Getting the odd occurrences
+		int amount = counter.getOddOcurrences();
+		// I check the amount is the expected one
+		assertEquals(amount, 9);
+	}
+	
+	/**
+	 * Verifica la cantidad de múltiplos de 3
+	 */
+	@Test
+	public void testMultiples() {
+		// Getting the occurrences of multiples of 3
+		int amount = counter.countMultiplesOf(3);
+		// I check the amount is the expected one
+		assertEquals(amount, 2);
+	}
 
 }
