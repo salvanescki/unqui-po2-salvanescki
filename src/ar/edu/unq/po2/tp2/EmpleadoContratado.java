@@ -3,7 +3,7 @@ package ar.edu.unq.po2.tp2;
 import java.time.LocalDate;
 
 public class EmpleadoContratado extends Empleado {
-	
+
 	@SuppressWarnings("unused")
 	private int numeroDeContrato;
 	@SuppressWarnings("unused")
@@ -15,20 +15,21 @@ public class EmpleadoContratado extends Empleado {
 		this.numeroDeContrato = numeroDeContrato;
 		this.medioDePago = medioDePago;
 	}
-	
+
 	public int gastosAdministrativosContractuales() {
 		return 50;
 	}
-	
+
 	public int sueldoBruto() {
 		return this.sueldoBasico();
 	}
-	
+
 	public int retenciones() {
 		return this.gastosAdministrativosContractuales() * 100;
 	}
-	
+
 	public String desgloceConceptos() {
-		return "Sueldo básico: " + this.sueldoBasico() + '\n' + "Gastos Administrativos Contractuales: " + this.gastosAdministrativosContractuales() + '\n';
+		return "Sueldo básico: " + this.sueldoBasico() + '\n' + "Gastos Administrativos Contractuales: "
+				+ this.gastosAdministrativosContractuales() + '\n';
 	}
 }

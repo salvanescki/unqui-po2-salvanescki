@@ -2,12 +2,13 @@ package ar.edu.unq.po2.tp2;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Empresa {
 	private String nombre;
 	private long cuit;
-	private ArrayList<Empleado> empleados;
-	private ArrayList<ReciboDeHaberes> recibosDeHaberes;
+	private List<Empleado> empleados;
+	private List<ReciboDeHaberes> recibosDeHaberes;
 
 	public Empresa(String nombre, long cuit) {
 		this.nombre = nombre;
@@ -46,8 +47,8 @@ public class Empresa {
 
 	public void liquidarSueldos() {
 		this.empleados.forEach(e -> {
-			recibosDeHaberes.add(new ReciboDeHaberes(e.nombre(), e.direccion(), LocalDate.now(),
-					e.sueldoBruto(), e.sueldoNeto(), e.desgloceConceptos()));
+			recibosDeHaberes.add(new ReciboDeHaberes(e.nombre(), e.direccion(), LocalDate.now(), e.sueldoBruto(),
+					e.sueldoNeto(), e.desgloceConceptos()));
 		});
 	}
 

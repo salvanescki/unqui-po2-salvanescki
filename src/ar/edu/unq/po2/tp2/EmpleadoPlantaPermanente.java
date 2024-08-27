@@ -15,7 +15,8 @@ public class EmpleadoPlantaPermanente extends Empleado {
 	}
 
 	public int sueldoBruto() {
-		return this.sueldoBasico() + (this.asignacionPorHijo() + this.asignacionPorConyuge() + this.montoPorAntiguedad()) * 100;
+		return this.sueldoBasico()
+				+ (this.asignacionPorHijo() + this.asignacionPorConyuge() + this.montoPorAntiguedad()) * 100;
 	}
 
 	public int montoPorAntiguedad() {
