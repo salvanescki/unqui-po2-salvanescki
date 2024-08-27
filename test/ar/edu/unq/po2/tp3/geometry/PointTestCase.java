@@ -1,4 +1,4 @@
-package ar.edu.unq.po2.tp3;
+package ar.edu.unq.po2.tp3.geometry;
 
 import static org.junit.jupiter.api.Assertions.*;
 
