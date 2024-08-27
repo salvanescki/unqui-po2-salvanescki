@@ -1,9 +1,11 @@
-package ar.edu.unq.po2.tp3;
+package ar.edu.unq.po2.tp3.number;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import ar.edu.unq.po2.tp3.number.Counter;
 
 public class CounterTestCase {
 	private Counter counter;

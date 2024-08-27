@@ -1,4 +1,4 @@
-package ar.edu.unq.po2.tp3;
+package ar.edu.unq.po2.tp3.number;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -7,6 +7,8 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
+
+import ar.edu.unq.po2.tp3.number.NumberUtils;
 
 class NumberUtilsTestCase {
 
