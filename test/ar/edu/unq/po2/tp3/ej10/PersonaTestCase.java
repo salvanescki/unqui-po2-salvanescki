@@ -8,7 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class PersonaTestCase {
-	
+
 	Persona juan;
 	Persona pedro;
 	SimpleDateFormat dateFormat;
@@ -22,15 +22,17 @@ class PersonaTestCase {
 
 	@Test
 	void edadTest() {
-		// Siendo hoy 27/8/2024, los tests deberían funcionar hasta abril del año que viene. Sino cambiar la edad esperada.
+		// Siendo hoy 27/8/2024, los tests deberían funcionar hasta abril del año que
+		// viene. Sino cambiar la edad esperada.
 		assertEquals(56, juan.edad());
 		assertEquals(29, pedro.edad());
 	}
-	
+
 	@Test
 	void menorQueTest() {
-		// Siendo hoy 27/8/2024, los tests deberían funcionar hasta abril del año que viene. Sino cambiar la edad esperada.
+		// Siendo hoy 27/8/2024, los tests deberían funcionar hasta abril del año que
+		// viene. Sino cambiar la edad esperada.
 		assertTrue(pedro.menorQue(juan));
 	}
-	
+
 }

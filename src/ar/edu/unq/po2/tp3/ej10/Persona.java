@@ -22,7 +22,7 @@ public class Persona {
 	public boolean menorQue(Persona persona) {
 		return this.edad() < persona.edad();
 	}
-	
+
 	public String nombre() {
 		return this.nombre;
 	}

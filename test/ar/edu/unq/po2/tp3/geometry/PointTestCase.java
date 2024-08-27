@@ -6,7 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class PointTestCase {
-	
+
 	Point o;
 	Point v;
 
@@ -21,20 +21,20 @@ class PointTestCase {
 		assertEquals(0, o.x());
 		assertEquals(0, o.y());
 	}
-	
+
 	@Test
 	void createPointTest() {
 		assertEquals(2, v.x());
 		assertEquals(4, v.y());
 	}
-	
+
 	@Test
 	void moveToTest() {
 		o.moveTo(3, 4);
 		assertEquals(3, o.x());
 		assertEquals(4, o.y());
 	}
-	
+
 	@Test
 	void addTest() {
 		Point u = new Point(2, 7);
