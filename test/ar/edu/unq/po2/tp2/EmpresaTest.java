@@ -5,8 +5,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.time.LocalDate;
 import java.time.Month;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
 
 class EmpresaTest {
 
@@ -16,17 +16,19 @@ class EmpresaTest {
 			LocalDate.of(2001, Month.NOVEMBER, 1), 25000000, LocalDate.of(2024, Month.DECEMBER, 1), 6);
 	private Empresa empresa = new Empresa("Empre S.A", 334608698233l);
 
-	@Test
-	void totalSueldosNetosTest() {
+	@BeforeEach
+	void setUp() {
 		empresa.contratarEmpleado(juan);
 		empresa.contratarEmpleado(carlos);
+	}
+
+	@Test
+	void totalSueldosNetosTest() {
 		assertEquals(42564700, empresa.totalSueldosNetos());
 	}
 
 	@Test
 	void liquidacionDeSueldosTest() {
-		empresa.contratarEmpleado(juan);
-		empresa.contratarEmpleado(carlos);
 		empresa.liquidarSueldos();
 		assertTrue(true);
 	}
