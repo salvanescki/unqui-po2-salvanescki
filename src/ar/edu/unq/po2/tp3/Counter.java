@@ -10,6 +10,11 @@ public class Counter {
 		// TODO Auto-generated method stub
 		
 	}
+
+	public int getEvenOcurrences() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	
 	
 }
