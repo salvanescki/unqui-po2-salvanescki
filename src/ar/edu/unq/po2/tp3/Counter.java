@@ -15,13 +15,11 @@ public class Counter {
 	}
 	
 	public int getOddOcurrences() {
-		// TODO Auto-generated method stub
-		return 0;
+		return (int) this.numbers.stream().filter(n -> n % 2 != 0).count();
 	}
 
 	public int countMultiplesOf(int i) {
-		// TODO Auto-generated method stub
-		return 0;
+		return (int) this.numbers.stream().filter(n -> n % i == 0).count();
 	}
 
 }
