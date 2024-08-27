@@ -6,14 +6,14 @@ import java.util.List;
 public class Multioperador {
 
 	public static int sumar(List<Integer> numeros) {
-		return 0;
+		return numeros.stream().mapToInt(n -> n).sum();
 	}
 	
 	public static int restar(List<Integer> numeros) {
-		return 0;
+		return numeros.stream().reduce((a, b) -> a - b).orElse(-1);
 	}
 	
 	public static int multiplicar(List<Integer> numeros) {
-		return 0;
+		return numeros.stream().reduce(1, (a, b) -> a * b);
 	}
 }
