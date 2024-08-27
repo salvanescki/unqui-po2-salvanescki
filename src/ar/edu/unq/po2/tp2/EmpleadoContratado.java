@@ -20,16 +20,44 @@ public class EmpleadoContratado extends Empleado {
 		return 50;
 	}
 
+	@Override
 	public int sueldoBruto() {
 		return this.sueldoBasico();
 	}
 
+	@Override
 	public int retenciones() {
 		return this.gastosAdministrativosContractuales() * 100;
 	}
 
+	@Override
 	public String desgloceConceptos() {
 		return "Sueldo básico: " + this.sueldoBasico() + '\n' + "Gastos Administrativos Contractuales: "
 				+ this.gastosAdministrativosContractuales() + '\n';
+	}
+
+	@Override
+	public int asignacionPorHijo() {
+		return 0;
+	}
+
+	@Override
+	public int asignacionPorConyuge() {
+		return 0;
+	}
+
+	@Override
+	public int obraSocial() {
+		return 0;
+	}
+
+	@Override
+	public int aportesJubilatorios() {
+		return 0;
+	}
+
+	@Override
+	public int horasExtra() {
+		return 0;
 	}
 }

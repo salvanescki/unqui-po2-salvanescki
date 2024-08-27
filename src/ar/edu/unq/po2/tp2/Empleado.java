@@ -3,7 +3,7 @@ package ar.edu.unq.po2.tp2;
 import java.time.LocalDate;
 import java.time.Period;
 
-public class Empleado {
+public abstract class Empleado {
 
 	private String nombre;
 	private String direccion;
@@ -43,46 +43,25 @@ public class Empleado {
 		return Period.between(this.fechaDeNacimiento, LocalDate.now()).getYears();
 	}
 
-	public int sueldoBruto() {
-		// Needs to be overridden by children
-		return 0;
-	}
-
-	public int asignacionPorHijo() {
-		// Needs to be overridden by children
-		return 0;
-	}
-
-	public int asignacionPorConyuge() {
-		// Needs to be overridden by children
-		return 0;
-	}
-
 	public int retenciones() {
 		return this.obraSocial() + this.aportesJubilatorios();
-	}
-
-	public int obraSocial() {
-		// Needs to be overridden by children
-		return 0;
-	}
-
-	public int aportesJubilatorios() {
-		// Needs to be overridden by children
-		return 0;
-	}
-
-	public int horasExtra() {
-		// Needs to be overridden by children
-		return 0;
 	}
 
 	public int sueldoNeto() {
 		return this.sueldoBruto() - this.retenciones();
 	}
 
-	public String desgloceConceptos() {
-		// Needs to be overridden by children
-		return "";
-	}
+	public abstract int sueldoBruto();
+
+	public abstract int asignacionPorHijo();
+
+	public abstract int asignacionPorConyuge();
+
+	public abstract int obraSocial();
+
+	public abstract int aportesJubilatorios();
+
+	public abstract int horasExtra();
+
+	public abstract String desgloceConceptos();
 }
