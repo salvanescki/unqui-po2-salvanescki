@@ -7,13 +7,11 @@ public class Counter {
 	private List<Integer> numbers = new ArrayList<Integer>();
 
 	public void addNumber(int i) {
-		// TODO Auto-generated method stub
-
+		numbers.add(i);
 	}
 
 	public int getEvenOcurrences() {
-		// TODO Auto-generated method stub
-		return 0;
+		return (int) this.numbers.stream().filter(n -> n % 2 == 0).count();
 	}
 
 }

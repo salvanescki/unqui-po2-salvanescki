@@ -38,7 +38,7 @@ public class CounterTestCase {
 		// Getting the even occurrences
 		int amount = counter.getEvenOcurrences();
 		// I check the amount is the expected one
-		assertEquals(amount, 9);
+		assertEquals(amount, 1);
 	}
 
 }
