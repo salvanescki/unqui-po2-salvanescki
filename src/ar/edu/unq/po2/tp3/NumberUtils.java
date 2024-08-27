@@ -27,4 +27,17 @@ public class NumberUtils {
 		}
 		return counter;
 	}
+	
+	/**
+	 * It returns the number between 0 and 1000 that is multple of x and y simultaneously
+	*/
+	public static int maximumCommonMultiple(int x, int y) {
+		if (x == 0 || y == 0) return -1;
+		for (int i = 1000; i > 0; i--) {
+			if(i % x == 0 && i % y == 0) {
+				return i;
+			}
+		}
+		return -1;
+	}
 }

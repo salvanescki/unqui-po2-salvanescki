@@ -28,5 +28,15 @@ class NumberUtilsTestCase {
 		numbers.add(200004);
 		assertEquals(200004, NumberUtils.numberWithMoreEvenDigits(numbers));
 	}
-
+	
+	@Test
+	void maximumCommonMultipleTest() {
+		assertEquals(999, NumberUtils.maximumCommonMultiple(3,9));
+		// Test between two big numbers
+		assertEquals(-1, NumberUtils.maximumCommonMultiple(998,999));
+		// Test with a number and zero
+		assertEquals(-1, NumberUtils.maximumCommonMultiple(0,2));
+		// Test with negative numbers
+		assertEquals(972, NumberUtils.maximumCommonMultiple(-12,18));
+	}
 }
