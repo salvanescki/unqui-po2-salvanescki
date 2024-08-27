@@ -30,5 +30,15 @@ public class CounterTestCase  {
 	counter.addNumber(1);
 	counter.addNumber(4);
 	}
-	  
+	/**
+	* Verifica la cantidad de pares
+	*/
+	@Test
+	public void testEvenNumbers() {
+	// Getting the even occurrences
+	int amount = counter.getEvenOcurrences();
+	// I check the amount is the expected one
+	assertEquals(amount, 9);
+	}
+	
 }
