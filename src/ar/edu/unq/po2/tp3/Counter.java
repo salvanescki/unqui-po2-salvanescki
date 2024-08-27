@@ -8,13 +8,12 @@ public class Counter {
 
 	public void addNumber(int i) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	public int getEvenOcurrences() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	
-	
+
 }
