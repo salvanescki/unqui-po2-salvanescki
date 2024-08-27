@@ -7,12 +7,12 @@ public class ReciboDeHaberes {
 	private String nombreEmpleado;
 	private String direccion;
 	private LocalDate fechaEmision;
-	private double sueldoBruto;
-	private double sueldoNeto;
+	private int sueldoBruto;
+	private int sueldoNeto;
 	private String desgloceConceptos;
 
-	public ReciboDeHaberes(String nombre, String direccion, LocalDate fechaEmision, double sueldoBruto,
-			double sueldoNeto, String desgloceConceptos) {
+	public ReciboDeHaberes(String nombre, String direccion, LocalDate fechaEmision, int sueldoBruto,
+			int sueldoNeto, String desgloceConceptos) {
 		this.nombreEmpleado = nombre;
 		this.direccion = direccion;
 		this.fechaEmision = fechaEmision;
@@ -33,11 +33,11 @@ public class ReciboDeHaberes {
 		return this.fechaEmision;
 	}
 
-	public double sueldoBruto() {
+	public int sueldoBruto() {
 		return this.sueldoBruto;
 	}
 
-	public double sueldoNeto() {
+	public int sueldoNeto() {
 		return this.sueldoNeto;
 	}
 

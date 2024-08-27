@@ -33,15 +33,15 @@ public class Empresa {
 		this.empleados.remove(unEmpleado);
 	}
 
-	public double totalSueldosNetos() {
+	public int totalSueldosNetos() {
 		return this.empleados.stream().mapToInt(e -> e.sueldoNeto()).sum();
 	}
 
-	public double totalSueldosBrutos() {
+	public int totalSueldosBrutos() {
 		return this.empleados.stream().mapToInt(e -> e.sueldoBruto()).sum();
 	}
 
-	public double totalRetenciones() {
+	public int totalRetenciones() {
 		return this.empleados.stream().mapToInt(e -> e.retenciones()).sum();
 	}
 
