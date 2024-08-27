@@ -34,7 +34,7 @@ class EmpresaTest {
 		empresa.liquidarSueldos();
 		assertEquals(2, empresa.cantidadDeRecibos());
 	}
-	
+
 	@Test
 	void contratarEmpleadoContratadoPepe() {
 		empresa.contratarEmpleado(pepe);

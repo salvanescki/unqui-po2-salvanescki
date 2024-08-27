@@ -13,7 +13,7 @@ public class Counter {
 	public int getEvenOcurrences() {
 		return this.countMultiplesOf(2);
 	}
-	
+
 	public int getOddOcurrences() {
 		return numbers.size() - this.countMultiplesOf(2);
 	}

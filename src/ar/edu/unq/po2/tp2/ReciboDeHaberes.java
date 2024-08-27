@@ -11,8 +11,8 @@ public class ReciboDeHaberes {
 	private int sueldoNeto;
 	private String desgloceConceptos;
 
-	public ReciboDeHaberes(String nombre, String direccion, LocalDate fechaEmision, int sueldoBruto,
-			int sueldoNeto, String desgloceConceptos) {
+	public ReciboDeHaberes(String nombre, String direccion, LocalDate fechaEmision, int sueldoBruto, int sueldoNeto,
+			String desgloceConceptos) {
 		this.nombreEmpleado = nombre;
 		this.direccion = direccion;
 		this.fechaEmision = fechaEmision;
