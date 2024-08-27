@@ -11,11 +11,11 @@ public class Counter {
 	}
 
 	public int getEvenOcurrences() {
-		return (int) this.numbers.stream().filter(n -> n % 2 == 0).count();
+		return this.countMultiplesOf(2);
 	}
 	
 	public int getOddOcurrences() {
-		return (int) this.numbers.stream().filter(n -> n % 2 != 0).count();
+		return numbers.size() - this.countMultiplesOf(2);
 	}
 
 	public int countMultiplesOf(int i) {
