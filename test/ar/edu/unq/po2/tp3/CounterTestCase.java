@@ -40,7 +40,7 @@ public class CounterTestCase {
 		// I check the amount is the expected one
 		assertEquals(amount, 1);
 	}
-	
+
 	/**
 	 * Verifica la cantidad de impares
 	 */
@@ -51,7 +51,7 @@ public class CounterTestCase {
 		// I check the amount is the expected one
 		assertEquals(amount, 9);
 	}
-	
+
 	/**
 	 * Verifica la cantidad de múltiplos de 3
 	 */
