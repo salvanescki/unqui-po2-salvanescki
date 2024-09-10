@@ -24,7 +24,7 @@ public class ProductoPrimeraNecesidad extends Producto {
 
 	@Override
 	public double getPrecio() {
-		return this.precio * (1.0 - this.descuento);
+		return Math.floor(this.precio * (1.0 - this.descuento) * 100) / 100.0;
 	}
 
 }
