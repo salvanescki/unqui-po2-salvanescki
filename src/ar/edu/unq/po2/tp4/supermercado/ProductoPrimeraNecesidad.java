@@ -1,14 +1,30 @@
 package ar.edu.unq.po2.tp4.supermercado;
 
-public class ProductoPrimeraNecesidad {
-
-	public ProductoPrimeraNecesidad(String string, double d, boolean b) {
-		// TODO Auto-generated constructor stub
+public class ProductoPrimeraNecesidad extends Producto {
+	
+	private static final double DESCUENTO = 0.1;
+	private final double descuento;
+	
+	public ProductoPrimeraNecesidad(String nombre, double precio, boolean esPrecioCuidado, double descuento) {
+		super(nombre, precio, esPrecioCuidado);
+		this.descuento = descuento;
+	}
+	
+	public ProductoPrimeraNecesidad(String nombre, double precio, boolean esPrecioCuidado) {
+		this(nombre, precio, esPrecioCuidado, DESCUENTO);
+	}
+	
+	public ProductoPrimeraNecesidad(String nombre, double precio, double descuento) {
+		this(nombre, precio, false, descuento);
+	}
+	
+	public ProductoPrimeraNecesidad(String nombre, double precio) {
+		this(nombre, precio, false, DESCUENTO);
 	}
 
-	public Double getPrecio() {
-		// TODO Auto-generated method stub
-		return null;
+	@Override
+	public double getPrecio() {
+		return this.precio * (1.0 - this.descuento);
 	}
 
 }

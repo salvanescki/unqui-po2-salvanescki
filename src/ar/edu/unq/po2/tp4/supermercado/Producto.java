@@ -1,35 +1,35 @@
 package ar.edu.unq.po2.tp4.supermercado;
 
-import java.util.function.BooleanSupplier;
-
 public class Producto {
+	
+	private String nombre;
+	protected double precio;
+	private boolean esPrecioCuidado;
 
-	public Producto(String string, double d, boolean b) {
-		// TODO Auto-generated constructor stub
+	public Producto(String nombre, double precio, boolean esPrecioCuidado) {
+		this.nombre = nombre;
+		this.precio = precio;
+		this.esPrecioCuidado = esPrecioCuidado;
 	}
 
-	public Producto(String string, double d) {
-		// TODO Auto-generated constructor stub
+	public Producto(String nombre, double precio) {
+		this(nombre, precio, false);
+	}
+	
+	public String getNombre() {
+		return this.nombre;
 	}
 
-	public Double getPrecio() {
-		// TODO Auto-generated method stub
-		return null;
+	public double getPrecio() {
+		return this.precio;
 	}
 
-	public BooleanSupplier esPrecioCuidado() {
-		// TODO Auto-generated method stub
-		return null;
+	public boolean esPrecioCuidado() {
+		return this.esPrecioCuidado;
 	}
 
-	public Object getNombre() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public void aumentarPrecio(double d) {
-		// TODO Auto-generated method stub
-		
+	public void aumentarPrecio(double aumento) {
+		this.precio += aumento;
 	}
 
 }
