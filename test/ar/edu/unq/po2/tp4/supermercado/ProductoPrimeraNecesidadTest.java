@@ -9,13 +9,13 @@ public class ProductoPrimeraNecesidadTest {
 
 	private ProductoPrimeraNecesidad arroz;
 	private ProductoPrimeraNecesidad leche;
-	
+
 	@BeforeEach
 	public void setUp() {
 		arroz = new ProductoPrimeraNecesidad("Arroz", 18.9d, false, 0.08);
 		leche = new ProductoPrimeraNecesidad("Leche", 8d, false, 0.11);
 	}
-	
+
 	@Test
 	public void testCalcularPrecio() {
 		assertEquals(new Double(17.38), arroz.getPrecio());

@@ -6,7 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class IngresoTest {
-	
+
 	private Ingreso ingresoEnero;
 
 	@BeforeEach
@@ -18,17 +18,17 @@ class IngresoTest {
 	void getMesTest() {
 		assertEquals("Enero", ingresoEnero.getMes());
 	}
-	
+
 	@Test
 	void getConceptoTest() {
 		assertEquals("Sueldo Enero", ingresoEnero.getConcepto());
 	}
-	
+
 	@Test
 	void getMontoTest() {
 		assertEquals(25000000, ingresoEnero.getMonto());
 	}
-	
+
 	@Test
 	void getMontoImponibleTest() {
 		assertEquals(25000000, ingresoEnero.getMontoImponible());

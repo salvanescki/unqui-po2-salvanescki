@@ -1,7 +1,7 @@
 package ar.edu.unq.po2.tp4.supermercado;
 
 public class Producto {
-	
+
 	private String nombre;
 	protected double precio;
 	private boolean esPrecioCuidado;
@@ -15,7 +15,7 @@ public class Producto {
 	public Producto(String nombre, double precio) {
 		this(nombre, precio, false);
 	}
-	
+
 	public String getNombre() {
 		return this.nombre;
 	}

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Supermercado {
-	
+
 	private String nombre;
 	private String dirección;
 	private List<Producto> catálogo = new ArrayList<Producto>();
@@ -13,11 +13,11 @@ public class Supermercado {
 		this.nombre = nombre;
 		this.dirección = dirección;
 	}
-	
+
 	public String getNombre() {
 		return this.nombre;
 	}
-	
+
 	public String getDirección() {
 		return this.dirección;
 	}

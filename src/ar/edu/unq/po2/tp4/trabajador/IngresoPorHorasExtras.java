@@ -8,11 +8,11 @@ public class IngresoPorHorasExtras extends Ingreso {
 		super(mes, concepto, monto);
 		this.horasExtras = horasExtras;
 	}
-	
+
 	public int getCantidadHorasExtras() {
 		return this.horasExtras;
 	}
-	
+
 	@Override
 	public int getMontoImponible() {
 		return 0;
