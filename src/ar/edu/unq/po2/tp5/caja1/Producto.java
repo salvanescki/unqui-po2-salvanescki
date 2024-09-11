@@ -27,7 +27,11 @@ public class Producto {
 	}
 
 	public boolean hayStock(int cantidad) {
-		return this.stock <= cantidad;
+		return this.stock >= cantidad;
+	}
+	
+	public int getStock() {
+		return this.stock;
 	}
 
 }
