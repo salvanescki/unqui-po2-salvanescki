@@ -17,7 +17,7 @@ class TrabajadorTest {
 			juan.agregarIngreso(new Ingreso(mes, "Sueldo Mes: " + mes, 25000000));
 		}
 		for(int i = 0; i < 3; i++) {
-			juan.agregarIngreso(new Ingreso("Diciembre", "Horas extras Diciembre", 360000));
+			juan.agregarIngreso(new IngresoPorHorasExtras("Diciembre", "Horas extras Diciembre", 360000, 2));
 		}
 	}
 
