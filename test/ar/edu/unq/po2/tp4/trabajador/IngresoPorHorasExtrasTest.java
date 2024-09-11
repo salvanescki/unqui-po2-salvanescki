@@ -13,13 +13,12 @@ class IngresoPorHorasExtrasTest {
 	void setUp() throws Exception {
 		horasExtrasEnero = new IngresoPorHorasExtras("Enero", "Horas Extras Enero", 120000, 2);
 	}
-	
+
 	@Test
 	void getCantidadHorasExtrasTest() {
 		assertEquals(2, horasExtrasEnero.getCantidadHorasExtras());
 	}
 
-	
 	@Test
 	void getMontoImponibleTest() {
 		assertEquals(0, horasExtrasEnero.getMontoImponible());
