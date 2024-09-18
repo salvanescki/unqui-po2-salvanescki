@@ -21,7 +21,7 @@ class BancoTest {
 		pedro = new Cliente("Pedro", "Gomez", "Calle falsa 213", 20, 30000000);
 		pablo = new Cliente("Pablo", "Diaz", "Calle falsa 231", 34, 120000000);
 		jorge = new Cliente("Jorge", "Lopez", "Calle falsa 132", 65, 120000000);
-		casaPedro = new PropiedadInmobiliaria("La casa de Pedro", "Calle false 213", 6000000000);
+		casaPedro = new PropiedadInmobiliaria("La casa de Pedro", "Calle false 213", 6000000000l);
 		
 		bancoNacion.agregarCliente(raul);
 		bancoNacion.agregarCliente(pedro);
@@ -30,7 +30,7 @@ class BancoTest {
 
 	@Test
 	void solicitarCreditoTest() {
-		bancoNacion.solicitarCredito(raul, 120000);
+		bancoNacion.solicitarCreditoPersonal(raul, 120000);
 		assertEquals(120000, raul.getAhorros());
 	}
 	
@@ -45,7 +45,7 @@ class BancoTest {
 	@Test
 	void montoTotalSolicitudesCreditoHipotecarioTest() {
 		bancoNacion.solicitarCreditoHipotecario(raul, 12000000, casaPedro);
-		bancoNacion.solicitarCreditoHipotecario(pedro, 6000000000, casaPedro); // es el mismo valor que el fiscal
+		bancoNacion.solicitarCreditoHipotecario(pedro, 6000000000l, casaPedro); // es el mismo valor que el fiscal
 		bancoNacion.solicitarCreditoHipotecario(pablo, 20000000, casaPedro);
 		assertEquals(32000000, bancoNacion.montoTotalSolicitudesCredito());
 	}
