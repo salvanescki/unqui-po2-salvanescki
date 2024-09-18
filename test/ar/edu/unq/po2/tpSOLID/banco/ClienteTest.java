@@ -24,8 +24,8 @@ class ClienteTest {
 	@Test
 	void solicitarCreditoTest() {
 		assertEquals(0, roberto.getAhorros());
-		bancoProvincia.solicitarCredito(roberto, 1500000000);
-		assertEquals(1500000000, roberto.getAhorros());
+		bancoProvincia.solicitarCreditoPersonal(roberto, 1500000);
+		assertEquals(1500000, roberto.getAhorros());
 	}
 
 }
