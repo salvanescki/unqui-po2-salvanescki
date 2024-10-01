@@ -29,7 +29,7 @@ class EmpleadoPasanteTest {
 	
 	@Test
 	void sueldoSiTrabajo600Horas() {
-		pepe = new EmpleadoPasante(1);
+		pepe = new EmpleadoPasante(600);
 		assertEquals(24000 * descuento, pepe.sueldo());
 	}
 
