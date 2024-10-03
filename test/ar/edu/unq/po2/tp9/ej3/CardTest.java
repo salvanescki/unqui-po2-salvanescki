@@ -1,0 +1,39 @@
+package ar.edu.unq.po2.tp9.ej3;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class CardTest {
+	
+	private Card card;
+
+	@BeforeEach
+	void setUp() throws Exception {
+		card = new Card(CardValue.A, CardSuit.DIAMONDS);
+	}
+	
+	@Test
+	void valueTest() {
+		assertEquals(CardValue.A, card.number());
+	}
+	
+	@Test
+	void suitTest() {
+		assertEquals(CardSuit.DIAMOND, card.suit());
+	}
+	
+	@Test
+	void rankingTest() {
+		Card lowerCard = new Card(CardValue.K, CardSuit.HEARTS);
+		assertEquals(1, card.compareTo(lowercard));
+	}
+	
+	@Test
+	void sameSuitTest() {
+		Card sameSuitCard = new Card(CardValue.K, CardSuit.DIAMONDS);
+		assertTrue(card.sameSuit(sameSuitCard));
+	}
+
+}
