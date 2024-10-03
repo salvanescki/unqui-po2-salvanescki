@@ -16,12 +16,12 @@ class CardTest {
 	
 	@Test
 	void valueTest() {
-		assertEquals(CardValue.A, card.number());
+		assertEquals(CardValue.A, card.getValue());
 	}
 	
 	@Test
 	void suitTest() {
-		assertEquals(CardSuit.DIAMOND, card.suit());
+		assertEquals(CardSuit.DIAMOND, card.getSuit());
 	}
 	
 	@Test
