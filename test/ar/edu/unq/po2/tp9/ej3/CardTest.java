@@ -11,23 +11,23 @@ class CardTest {
 
 	@BeforeEach
 	void setUp() throws Exception {
-		card = new Card(CardValue.A, CardSuit.DIAMONDS);
+		card = new Card(CardValue.ACE, CardSuit.DIAMONDS);
 	}
 	
 	@Test
 	void valueTest() {
-		assertEquals(CardValue.A, card.getValue());
+		assertEquals(CardValue.ACE, card.getValue());
 	}
 	
 	@Test
 	void suitTest() {
-		assertEquals(CardSuit.DIAMOND, card.getSuit());
+		assertEquals(CardSuit.DIAMONDS, card.getSuit());
 	}
 	
 	@Test
 	void rankingTest() {
 		Card lowerCard = new Card(CardValue.K, CardSuit.HEARTS);
-		assertEquals(1, card.compareTo(lowercard));
+		assertEquals(1, card.compareTo(lowerCard));
 	}
 	
 	@Test
