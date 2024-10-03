@@ -33,7 +33,7 @@ class CardTest {
 	@Test
 	void sameSuitTest() {
 		Card sameSuitCard = new Card(CardValue.K, CardSuit.DIAMONDS);
-		assertTrue(card.sameSuit(sameSuitCard));
+		assertTrue(card.isSameSuit(sameSuitCard));
 	}
 
 }
