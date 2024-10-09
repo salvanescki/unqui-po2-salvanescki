@@ -26,6 +26,7 @@ class EncriptadorNaiveTest {
 		String rawPassword = "hola soy nicolás";
 		String encryptedPassword = encryptor.encriptar(rawPassword);
 		assertNotEquals(rawPassword, encryptedPassword);
+		assertEquals("nicolás soy hola", encryptedPassword);
 		assertEquals(rawPassword, encryptor.desencriptar(encryptedPassword));
 	}
 	
@@ -41,11 +42,11 @@ class EncriptadorNaiveTest {
 	
 	@Test
 	void cambiarLetrasPorNumerosTest() {
-		encryptor.changeEncryptor(vowelShifter);
-		String rawPassword = "paralelogramo";
+		encryptor.changeEncryptor(charToNumber);
+		String rawPassword = "un paralelogramo";
 		String encryptedPassword = encryptor.encriptar(rawPassword);
 		assertNotEquals(rawPassword, encryptedPassword);
-		assertEquals("17,1,19,1,12,5,12,16,7,19,1,13,16", encryptedPassword);
+		assertEquals("22,14,0,17,1,19,1,12,5,12,16,7,19,1,13,16", encryptedPassword);
 		assertEquals(rawPassword, encryptor.desencriptar(encryptedPassword));
 	}
 
