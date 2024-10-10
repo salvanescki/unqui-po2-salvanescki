@@ -14,8 +14,8 @@ class MP3Test {
 	@BeforeEach
 	void setUp() throws Exception {
 		mp3 = new MP3();
-		aSong = mock();
-		otherSong = mock();
+		aSong = new Song();
+		otherSong = new Song();
 	}
 
 	@Test
