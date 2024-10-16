@@ -8,7 +8,7 @@ public class CarroDeCompras {
 	
 	@SuppressWarnings("unused")
 	private void setElements(List<Product> products) {
-		this.products = products;
+		this.products.addAll(products);
 	}
 	
 	public List<Product> getElements(){
